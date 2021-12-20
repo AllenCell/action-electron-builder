@@ -160,9 +160,8 @@ const runAction = () => {
 	// Disable console advertisements during install phase
 	setEnv("ADBLOCK", true);
 
-	log("Installing dependencies using NPM");
+	log("Installing dependencies");
 	run("npm ci");
-	run("npx lerna bootstrap --hoist");
 
 	// Run NPM build script if it exists
 	run("npm run build --if-present", pkgRoot);
