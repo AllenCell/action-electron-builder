@@ -161,7 +161,7 @@ const runAction = () => {
 	setEnv("ADBLOCK", true);
 
 	log("Installing dependencies");
-	run("npm ci");
+	run("npm install");
 
 	// Run NPM build script if it exists
 	run("npm run build --if-present", pkgRoot);
